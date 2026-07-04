@@ -45,3 +45,6 @@ $routes->get('user/hapus/(:num)', 'User::hapus/$1');
 
 // about
 $routes->get('about', 'About::index');
+
+// customer
+$routes->get('customer', 'Customer::index');
