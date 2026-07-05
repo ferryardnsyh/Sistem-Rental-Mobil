@@ -7,6 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('login', 'Auth::login');
+$routes->get('/', 'Customer::index');
 $routes->post('login', 'Auth::processLogin');
 $routes->get('logout', 'Auth::logout');
 $routes->get('dashboard', 'Dashboard::index');

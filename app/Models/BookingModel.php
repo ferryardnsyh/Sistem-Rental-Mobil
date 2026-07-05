@@ -24,6 +24,8 @@ class BookingModel extends Model
 
         'total_harga',
 
+        'metode_pembayaran',
+
         'status'
 
     ];

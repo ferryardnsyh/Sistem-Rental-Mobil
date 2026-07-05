@@ -39,17 +39,16 @@ Swal.fire({
                 <thead class="table-light">
 
                     <tr>
-
                         <th>No</th>
                         <th>Customer</th>
                         <th>Mobil</th>
                         <th>Tgl Sewa</th>
                         <th>Tgl Kembali</th>
                         <th>Lama</th>
-                        <th>Total</th>
+                        <th>Total Harga</th>
+                        <th>Metode Pembayaran</th>
                         <th>Status</th>
                         <th width="220">Aksi</th>
-
                     </tr>
 
                 </thead>
@@ -64,25 +63,53 @@ Swal.fire({
 
                         <td><?= $no++ ?></td>
 
-                        <td><?= $b['nama'] ?></td>
+                        <td><?= esc($b['nama']) ?></td>
 
-                        <td><?= $b['nama_mobil'] ?></td>
+                        <td><?= esc($b['nama_mobil']) ?></td>
 
                         <td><?= date('d-m-Y', strtotime($b['tanggal_sewa'])) ?></td>
 
                         <td><?= date('d-m-Y', strtotime($b['tanggal_kembali'])) ?></td>
 
-                        <td><?= $b['lama_sewa'] ?> Hari</td>
+                        <td><?= esc($b['lama_sewa']) ?> Hari</td>
 
                         <td>
-                            Rp <?= number_format($b['total_harga'], 0, ',', '.') ?>
+                            Rp <?= number_format($b['total_harga'],0,',','.') ?>
+                        </td>
+
+                        <td>
+                            <?php
+                            if(isset($b['metode_pembayaran'])){
+
+                                switch($b['metode_pembayaran']){
+
+                                    case 'Transfer Bank':
+                                        echo '<span class="badge bg-primary">Transfer Bank</span>';
+                                        break;
+
+                                    case 'E-Wallet':
+                                        echo '<span class="badge bg-success">E-Wallet</span>';
+                                        break;
+
+                                    case 'Cash':
+                                        echo '<span class="badge bg-secondary">Cash</span>';
+                                        break;
+
+                                    default:
+                                        echo '<span class="badge bg-dark">'.$b['metode_pembayaran'].'</span>';
+                                }
+
+                            }else{
+                                echo '<span class="text-danger">Belum dipilih</span>';
+                            }
+                            ?>
                         </td>
 
                         <td>
 
                             <?php if ($b['status'] == 'Menunggu') : ?>
 
-                                <span class="badge bg-warning">
+                                <span class="badge bg-warning text-dark">
                                     Menunggu
                                 </span>
 
@@ -101,7 +128,7 @@ Swal.fire({
                             <?php else : ?>
 
                                 <span class="badge bg-danger">
-                                    Dibatalkan
+                                    Ditolak
                                 </span>
 
                             <?php endif; ?>
@@ -112,7 +139,7 @@ Swal.fire({
 
                             <?php if ($b['status'] == 'Menunggu') : ?>
 
-                                <a href="<?= base_url('booking/setujui/' . $b['id']) ?>"
+                                <a href="<?= base_url('booking/setujui/'.$b['id']) ?>"
                                    class="btn btn-success btn-sm">
 
                                     <i class="bi bi-check-circle"></i>
@@ -121,7 +148,7 @@ Swal.fire({
 
                                 </a>
 
-                                <a href="<?= base_url('booking/tolak/' . $b['id']) ?>"
+                                <a href="<?= base_url('booking/tolak/'.$b['id']) ?>"
                                    class="btn btn-danger btn-sm">
 
                                     <i class="bi bi-x-circle"></i>
@@ -132,7 +159,7 @@ Swal.fire({
 
                             <?php elseif ($b['status'] == 'Disetujui') : ?>
 
-                                <a href="<?= base_url('booking/selesai/' . $b['id']) ?>"
+                                <a href="<?= base_url('booking/selesai/'.$b['id']) ?>"
                                    class="btn btn-primary btn-sm">
 
                                     <i class="bi bi-check2-circle"></i>
@@ -165,20 +192,25 @@ Swal.fire({
 
 <script>
 
-new DataTable('#bookingTable', {
-    responsive: true,
-    pageLength: 10,
-    autoWidth: false,
-    language: {
-        search: "Cari :",
-        lengthMenu: "Tampilkan _MENU_ data",
-        info: "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
-        zeroRecords: "Data tidak ditemukan",
-        paginate: {
-            previous: "←",
-            next: "→"
+new DataTable('#bookingTable',{
+
+    responsive:true,
+
+    pageLength:10,
+
+    autoWidth:false,
+
+    language:{
+        search:"Cari :",
+        lengthMenu:"Tampilkan _MENU_ data",
+        info:"Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
+        zeroRecords:"Data tidak ditemukan",
+        paginate:{
+            previous:"←",
+            next:"→"
         }
     }
+
 });
 
 </script>

@@ -62,26 +62,22 @@
                         <div class="mb-3">
 
                             <label class="form-label">
-
-                                Username
-
+                                Email
                             </label>
 
                             <input
-                                type="text"
-                                name="username"
+                                type="email"
+                                name="email"
                                 class="form-control"
-                                placeholder="Masukkan username"
+                                placeholder="Masukkan email"
                                 required>
 
                         </div>
 
-                        <div class="mb-4">
+                        <div class="mb-3">
 
                             <label class="form-label">
-
                                 Password
-
                             </label>
 
                             <input

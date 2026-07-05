@@ -118,6 +118,7 @@ class Customer extends BaseController
             'tanggal_sewa'      => $tanggalSewa,
             'tanggal_kembali'   => $tanggalKembali,
             'lama_sewa'         => $lama,
+            'metode_pembayaran' => $this->request->getPost('metode_pembayaran'),
             'total_harga'       => $lama * $mobil['harga_sewa'],
             'status'            => 'Menunggu'
 
@@ -127,9 +128,7 @@ class Customer extends BaseController
             ->with('success', 'Booking berhasil dibuat.');
     }
 
-    // ======================================================
-    // BOOKING SAYA
-    // ======================================================
+    // booking saya
     public function bookingSaya()
     {
         if (!session()->get('logged_in')) {

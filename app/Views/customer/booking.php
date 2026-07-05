@@ -16,57 +16,35 @@
             <div class="card-body">
 
                 <h3 class="fw-bold">
-
                     <?= esc($mobil['nama_mobil']) ?>
-
                 </h3>
 
                 <p class="text-muted">
-
                     <?= esc($mobil['merk']) ?>
-
                 </p>
 
                 <hr>
 
                 <div class="mb-2">
-
                     <i class="bi bi-calendar"></i>
-
                     Tahun :
-
                     <strong><?= esc($mobil['tahun']) ?></strong>
-
                 </div>
 
                 <div class="mb-2">
-
                     <i class="bi bi-gear"></i>
-
                     <?= esc($mobil['transmisi']) ?>
-
                 </div>
 
                 <div class="mb-3">
-
                     <span class="badge bg-success rounded-pill">
-
                         <?= esc($mobil['status']) ?>
-
                     </span>
-
                 </div>
 
                 <h3 class="text-primary fw-bold">
-
                     Rp <?= number_format($mobil['harga_sewa'],0,',','.') ?>
-
-                    <small class="text-muted fs-6">
-
-                        / Hari
-
-                    </small>
-
+                    <small class="text-muted fs-6">/ Hari</small>
                 </h3>
 
             </div>
@@ -83,17 +61,13 @@
             <div class="card-body p-4">
 
                 <h3 class="fw-bold mb-4">
-
                     Booking Mobil
-
                 </h3>
 
                 <?php if(session()->getFlashdata('error')) : ?>
 
                     <div class="alert alert-danger">
-
                         <?= session()->getFlashdata('error') ?>
-
                     </div>
 
                 <?php endif; ?>
@@ -108,15 +82,12 @@
 
                     <input type="hidden"
                            id="harga"
-                           name="harga_sewa"
                            value="<?= $mobil['harga_sewa'] ?>">
 
                     <div class="mb-3">
 
                         <label class="form-label">
-
                             Tanggal Sewa
-
                         </label>
 
                         <input type="date"
@@ -130,9 +101,7 @@
                     <div class="mb-3">
 
                         <label class="form-label">
-
                             Tanggal Kembali
-
                         </label>
 
                         <input type="date"
@@ -146,9 +115,7 @@
                     <div class="mb-3">
 
                         <label class="form-label">
-
                             Lama Sewa
-
                         </label>
 
                         <input type="text"
@@ -158,18 +125,49 @@
 
                     </div>
 
-                    <div class="mb-4">
+                    <div class="mb-3">
 
                         <label class="form-label">
-
                             Total Harga
-
                         </label>
 
                         <input type="text"
                                id="total"
                                class="form-control fw-bold"
                                readonly>
+
+                    </div>
+
+                    <!-- Metode Pembayaran -->
+                    <div class="mb-4">
+
+                        <label class="form-label">
+                            Metode Pembayaran
+                        </label>
+
+                        <select name="metode_pembayaran"
+                                class="form-select"
+                                required>
+
+                            <option value="">-- Pilih Metode Pembayaran --</option>
+
+                            <option value="Transfer Bank">
+                                Transfer Bank
+                            </option>
+
+                            <option value="QRIS">
+                                QRIS
+                            </option>
+
+                            <option value="E-Wallet">
+                                E-Wallet (DANA / OVO / GoPay / ShopeePay)
+                            </option>
+
+                            <option value="Cash">
+                                Cash
+                            </option>
+
+                        </select>
 
                     </div>
 
@@ -194,7 +192,6 @@
 <script>
 
 const tgl1 = document.getElementById('tglSewa');
-
 const tgl2 = document.getElementById('tglKembali');
 
 function hitungTotal(){
@@ -202,7 +199,6 @@ function hitungTotal(){
     if(tgl1.value && tgl2.value){
 
         let awal = new Date(tgl1.value);
-
         let akhir = new Date(tgl2.value);
 
         let lama = (akhir-awal)/(1000*60*60*24);
@@ -216,13 +212,11 @@ function hitungTotal(){
             let total = lama * harga;
 
             document.getElementById('total').value =
-
-            "Rp " + total.toLocaleString('id-ID');
+                "Rp " + total.toLocaleString('id-ID');
 
         }else{
 
             document.getElementById('lama').value = "";
-
             document.getElementById('total').value = "";
 
         }
@@ -232,7 +226,6 @@ function hitungTotal(){
 }
 
 tgl1.addEventListener('change', hitungTotal);
-
 tgl2.addEventListener('change', hitungTotal);
 
 </script>

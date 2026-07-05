@@ -126,37 +126,83 @@ Tanggal Kembali
 
 <div class="row mb-3">
 
-<div class="col-6">
+    <div class="col-6">
 
-<small class="text-muted">
+        <small class="text-muted">
+            Lama Sewa
+        </small>
 
-Lama Sewa
+        <div>
+            <?= $b['lama_sewa'] ?> Hari
+        </div>
 
-</small>
+    </div>
 
-<div>
+    <div class="col-6">
 
-<?= $b['lama_sewa'] ?> Hari
+        <small class="text-muted">
+            Total
+        </small>
 
-</div>
+        <div class="fw-bold text-primary">
+            Rp <?= number_format($b['total_harga'],0,',','.') ?>
+        </div>
 
-</div>
-
-<div class="col-6">
-
-<small class="text-muted">
-
-Total
-
-</small>
-
-<div class="fw-bold text-primary">
-
-Rp <?= number_format($b['total_harga'],0,',','.') ?>
+    </div>
 
 </div>
 
-</div>
+<div class="mb-3">
+
+    <small class="text-muted">
+        Metode Pembayaran
+    </small>
+
+    <div class="fw-semibold">
+
+        <?php
+        switch($b['metode_pembayaran']){
+
+            case 'bca':
+                echo '<span class="badge bg-primary">Transfer BCA</span>';
+                break;
+
+            case 'bni':
+                echo '<span class="badge bg-warning text-dark">Transfer BNI</span>';
+                break;
+
+            case 'bri':
+                echo '<span class="badge bg-danger">Transfer BRI</span>';
+                break;
+
+            case 'mandiri':
+                echo '<span class="badge bg-success">Transfer Mandiri</span>';
+                break;
+
+            case 'gopay':
+                echo '<span class="badge bg-info text-dark">GoPay</span>';
+                break;
+
+            case 'ovo':
+                echo '<span class="badge bg-secondary">OVO</span>';
+                break;
+
+            case 'dana':
+                echo '<span class="badge bg-primary">DANA</span>';
+                break;
+
+            case 'qris':
+                echo '<span class="badge bg-dark">QRIS</span>';
+                break;
+
+            default:
+                echo '<span class="badge bg-light text-dark">'
+                     . esc($b['metode_pembayaran']) .
+                     '</span>';
+        }
+        ?>
+
+    </div>
 
 </div>
 
