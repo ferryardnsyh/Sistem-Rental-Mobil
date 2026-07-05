@@ -96,11 +96,6 @@ $segment = service('uri')->getSegment(1);
 
 <div class="sidebar">
 
-    <h4 class="sidebar-title">
-        <i class="bi bi-car-front-fill"></i>
-        Rental Mobil
-    </h4>
-
     <ul class="nav flex-column">
 
         <li class="nav-item">

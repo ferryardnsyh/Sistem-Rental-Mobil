@@ -35,33 +35,26 @@
 
         <div class="card border-0 shadow-sm rounded-4 h-100">
 
-            <div class="card-body text-center p-3">
+            <div class="card-body text-center p-4">
 
-                <img src="<?= base_url('images/profil/ferry.jpg') ?>"
+                <img src="<?= base_url('images/profil/1.jpg') ?>"
                      class="rounded-circle shadow mb-3"
                      width="120"
                      height="120"
                      style="object-fit:cover;"
                      onerror="this.src='https://placehold.co/120x120';">
 
-                <table class="table table-borderless table-sm text-start mb-0">
+                <h5 class="fw-bold">
+                    Ferry Ardiansyah
+                </h5>
 
-                    <tr>
-                        <th width="35%">Nama</th>
-                        <td>: Ferry Ardiansyah</td>
-                    </tr>
+                <p class="text-muted nim">
+                    2350081001
+                </p>
 
-                    <tr>
-                        <th>NIM</th>
-                        <td>: 2350081001</td>
-                    </tr>
-
-                    <tr>
-                        <th>Kelas</th>
-                        <td>: DSE-A</td>
-                    </tr>
-
-                </table>
+                <span class="badge bg-primary px-3 py-2">
+                    DSE-A
+                </span>
 
             </div>
 
@@ -74,33 +67,26 @@
 
         <div class="card border-0 shadow-sm rounded-4 h-100">
 
-            <div class="card-body text-center p-3">
+            <div class="card-body text-center p-4">
 
-                <img src="<?= base_url('images/profil/anggota2.jpg') ?>"
+                <img src="<?= base_url('images/profil/2.jpg') ?>"
                      class="rounded-circle shadow mb-3"
                      width="120"
                      height="120"
                      style="object-fit:cover;"
                      onerror="this.src='https://placehold.co/120x120';">
 
-                <table class="table table-borderless table-sm text-start mb-0">
+                <h5 class="fw-bold">
+                    Nur Yasani Qalam Nabilah
+                </h5>
 
-                    <tr>
-                        <th width="35%">Nama</th>
-                        <td>: Nur Yasani Qalam Nabilah</td>
-                    </tr>
+                <p class="text-muted nim">
+                    2350081013
+                </p>
 
-                    <tr>
-                        <th>NIM</th>
-                        <td>: 2350081013</td>
-                    </tr>
-
-                    <tr>
-                        <th>Kelas</th>
-                        <td>: DSE-A</td>
-                    </tr>
-
-                </table>
+                <span class="badge bg-primary px-3 py-2">
+                    DSE-A
+                </span>
 
             </div>
 
@@ -113,33 +99,26 @@
 
         <div class="card border-0 shadow-sm rounded-4 h-100">
 
-            <div class="card-body text-center p-3">
+            <div class="card-body text-center p-4">
 
-                <img src="<?= base_url('images/profil/anggota3.jpg') ?>"
+                <img src="<?= base_url('images/profil/3.jpg') ?>"
                      class="rounded-circle shadow mb-3"
                      width="120"
                      height="120"
                      style="object-fit:cover;"
                      onerror="this.src='https://placehold.co/120x120';">
 
-                <table class="table table-borderless table-sm text-start mb-0">
+                <h5 class="fw-bold">
+                    Aditya Rivarwa Prasetia
+                </h5>
 
-                    <tr>
-                        <th width="35%">Nama</th>
-                        <td>: Aditya Rivarwa Prasetia</td>
-                    </tr>
+                <p class="text-muted nim">
+                    2350081018
+                </p>
 
-                    <tr>
-                        <th>NIM</th>
-                        <td>: 2350081018</td>
-                    </tr>
-
-                    <tr>
-                        <th>Kelas</th>
-                        <td>: DSE-A</td>
-                    </tr>
-
-                </table>
+                <span class="badge bg-primary px-3 py-2">
+                    DSE-A
+                </span>
 
             </div>
 
@@ -152,33 +131,26 @@
 
         <div class="card border-0 shadow-sm rounded-4 h-100">
 
-            <div class="card-body text-center p-3">
+            <div class="card-body text-center p-4">
 
-                <img src="<?= base_url('images/profil/anggota4.jpg') ?>"
+                <img src="<?= base_url('images/profil/4.jpg') ?>"
                      class="rounded-circle shadow mb-3"
                      width="120"
                      height="120"
                      style="object-fit:cover;"
                      onerror="this.src='https://placehold.co/120x120';">
 
-                <table class="table table-borderless table-sm text-start mb-0">
+                <h5 class="fw-bold">
+                    Ihsan Nur Majid
+                </h5>
 
-                    <tr>
-                        <th width="35%">Nama</th>
-                        <td>: Ihsan Nur Majid</td>
-                    </tr>
+                <p class="text-muted nim">
+                    2350081026
+                </p>
 
-                    <tr>
-                        <th>NIM</th>
-                        <td>: 2350081026</td>
-                    </tr>
-
-                    <tr>
-                        <th>Kelas</th>
-                        <td>: DSE-A</td>
-                    </tr>
-
-                </table>
+                <span class="badge bg-primary px-3 py-2">
+                    DSE-A
+                </span>
 
             </div>
 
@@ -189,34 +161,47 @@
 </div>
 
 <style>
+
 .card{
-    transition: .3s;
+    transition:.3s;
+    border-radius:18px;
 }
 
 .card:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,.15)!important;
-}
-
-.table th,
-.table td{
-    font-size:14px;
-    vertical-align:middle;
-}
-
-.table th{
-    color:#555;
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15)!important;
 }
 
 .rounded-circle{
     border:4px solid #f1f3f5;
 }
 
-@media(max-width:992px){
+.card h5{
+    font-size:18px;
+    font-weight:700;
+    margin-bottom:2px;
+    line-height:1.3;
+}
+
+.card .nim{
+    font-size:15px;
+    color:#6c757d;
+    margin-bottom:12px;
+    line-height:1.2;
+}
+
+.badge{
+    font-size:14px;
+    border-radius:20px;
+    padding:8px 18px;
+}
+
+@media (max-width: 992px){
     .col-lg-3{
         margin-bottom:20px;
     }
 }
+
 </style>
 
 <?= $this->endSection() ?>

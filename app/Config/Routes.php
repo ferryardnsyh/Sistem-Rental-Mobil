@@ -11,6 +11,9 @@ $routes->post('login', 'Auth::processLogin');
 $routes->get('logout', 'Auth::logout');
 $routes->get('dashboard', 'Dashboard::index');
 
+$routes->get('register', 'Auth::register');
+$routes->post('register', 'Auth::processRegister');
+
 // Mobil
 $routes->get('mobil', 'Mobil::index');
 $routes->get('mobil/tambah', 'Mobil::tambah');

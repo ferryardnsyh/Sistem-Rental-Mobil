@@ -41,6 +41,8 @@ class User extends BaseController
 
             'email'     => $this->request->getPost('email'),
 
+            'no_telp'   => $this->request->getPost('no_telp'),
+
             'password'  => password_hash(
                 $this->request->getPost('password'),
                 PASSWORD_DEFAULT
@@ -71,17 +73,19 @@ class User extends BaseController
     {
         $data = [
 
-            'nama' => $this->request->getPost('nama'),
+            'nama'      => $this->request->getPost('nama'),
 
-            'username' => $this->request->getPost('username'),
+            'username'  => $this->request->getPost('username'),
 
-            'email' => $this->request->getPost('email'),
+            'email'     => $this->request->getPost('email'),
 
-            'role' => $this->request->getPost('role')
+            'no_telp'   => $this->request->getPost('no_telp'),
+
+            'role'      => $this->request->getPost('role')
 
         ];
 
-        if($this->request->getPost('password') != ''){
+        if ($this->request->getPost('password') != '') {
 
             $data['password'] = password_hash(
 
@@ -93,7 +97,7 @@ class User extends BaseController
 
         }
 
-        $this->user->update($id,$data);
+        $this->user->update($id, $data);
 
         return redirect()->to('/user')
                          ->with('success','User berhasil diupdate.');

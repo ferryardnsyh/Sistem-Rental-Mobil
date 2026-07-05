@@ -59,6 +59,56 @@ class Auth extends BaseController
                          ->with('error', 'Role pengguna tidak valid.');
     }
 
+    public function register()
+    {
+        return view('auth/register');
+    }
+
+    public function processRegister()
+    {
+        $model = new UserModel();
+
+        if ($this->request->getPost('password') != $this->request->getPost('konfirmasi_password')) {
+
+            return redirect()->back()->with('error', 'Konfirmasi password tidak sesuai.');
+
+        }
+
+        if ($model->where('username', $this->request->getPost('username'))->first()) {
+
+            return redirect()->back()->with('error', 'Username sudah digunakan.');
+
+        }
+
+        if ($model->where('email', $this->request->getPost('email'))->first()) {
+
+            return redirect()->back()->with('error', 'Email sudah digunakan.');
+
+        }
+
+        $model->save([
+
+            'nama'      => $this->request->getPost('nama'),
+
+            'username'  => $this->request->getPost('username'),
+
+            'email'     => $this->request->getPost('email'),
+
+            'no_telp'   => $this->request->getPost('no_telp'),
+
+            'password'  => password_hash(
+                $this->request->getPost('password'),
+                PASSWORD_DEFAULT
+            ),
+
+            'role'      => 'customer'
+
+        ]);
+
+        return redirect()->to('/login')
+                        ->with('success', 'Registrasi berhasil. Silakan login.');
+    }
+
     public function logout()
     {
         session()->destroy();

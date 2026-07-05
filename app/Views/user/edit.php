@@ -67,6 +67,15 @@
 
                     </div>
 
+                    <div class="mb-3">
+                        <label class="form-label">No. Telepon</label>
+                        <input type="text"
+                            name="no_telp"
+                            class="form-control"
+                            value="<?= $user['no_telp']; ?>"
+                            required>
+                    </div>
+
                     <div class="col-md-6 mb-3">
 
                         <label>Password Baru</label>

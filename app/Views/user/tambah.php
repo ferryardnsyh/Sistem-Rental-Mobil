@@ -76,6 +76,15 @@
 
                     </div>
 
+                    <div class="mb-3">
+                        <label class="form-label">No. Telepon</label>
+                        <input type="text"
+                            name="no_telp"
+                            class="form-control"
+                            placeholder="Masukkan nomor telepon"
+                            required>
+                    </div>
+
                     <div class="col-md-6 mb-3">
 
                         <label class="form-label">

@@ -8,7 +8,7 @@
 
             <i class="bi bi-car-front-fill me-2"></i>
 
-            FAS Rental Mobil
+            Rental Mobil
 
         </a>
 

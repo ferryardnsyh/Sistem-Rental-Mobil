@@ -57,6 +57,8 @@ Swal.fire({
 
                         <th>Email</th>
 
+                        <th>No. Telepon</th>
+
                         <th>Role</th>
 
                         <th width="170">Aksi</th>
@@ -80,6 +82,8 @@ Swal.fire({
                         <td><?= esc($u['username']) ?></td>
 
                         <td><?= esc($u['email']) ?></td>
+
+                        <td><?= esc($u['no_telp']); ?></td>
 
                         <td>
 

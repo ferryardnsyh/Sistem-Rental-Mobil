@@ -1,51 +1,56 @@
-<nav class="navbar navbar-expand-lg bg-white">
+<nav class="navbar navbar-expand-lg admin-navbar">
 
-<div class="container-fluid">
+    <div class="container-fluid">
 
-<a class="navbar-brand fw-bold">
+        <a class="navbar-brand fw-bold text-white">
 
-Rental Mobil
+            <i class="bi bi-car-front-fill me-2"></i>
 
-</a>
+            Rental Mobil
 
-<button class="navbar-toggler"
-data-bs-toggle="collapse"
-data-bs-target="#menu">
+        </a>
 
-<span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
 
-</button>
+            <span class="navbar-toggler-icon"></span>
 
-<div class="collapse navbar-collapse" id="menu">
+        </button>
 
-<ul class="navbar-nav ms-auto">
+        <div class="collapse navbar-collapse" id="menu">
 
-<li class="nav-item">
+            <ul class="navbar-nav ms-auto align-items-center">
 
-<span class="nav-link">
+                <li class="nav-item me-3">
 
-<?= session()->get('nama'); ?>
+                    <span class="nav-link text-white">
 
-</span>
+                        <i class="bi bi-person-circle me-1"></i>
 
-</li>
+                        <?= session()->get('nama'); ?>
 
-<li class="nav-item">
+                    </span>
 
-<a class="nav-link text-danger"
+                </li>
 
-href="<?= base_url('logout')?>">
+                <li class="nav-item">
 
-Logout
+                    <a class="btn btn-sm btn-danger px-3"
+                       href="<?= base_url('logout')?>">
 
-</a>
+                        <i class="bi bi-box-arrow-right me-1"></i>
 
-</li>
+                        Logout
 
-</ul>
+                    </a>
 
-</div>
+                </li>
 
-</div>
+            </ul>
+
+        </div>
+
+    </div>
 
 </nav>

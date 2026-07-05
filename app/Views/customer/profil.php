@@ -12,12 +12,13 @@
 
                 <div class="text-center mb-4">
 
-                    <img src="<?= base_url('images/profile-default.png') ?>"
-                         class="rounded-circle shadow"
-                         width="140"
-                         height="140"
-                         style="object-fit:cover;"
-                         onerror="this.src='https://placehold.co/140x140';">
+                    <img src="<?= !empty($user['foto'])
+                        ? base_url('uploads/profil/'.$user['foto'])
+                        : 'https://placehold.co/140x140' ?>"
+                    class="rounded-circle shadow"
+                    width="140"
+                    height="140"
+                    style="object-fit:cover;">
 
                     <h3 class="fw-bold mt-3">
                         <?= esc($user['nama']) ?>
@@ -59,29 +60,42 @@
 
                     </div>
 
-                    <div class="col-md-12 mb-3">
+                    <div class="col-md-6 mb-4">
 
                         <label class="form-label fw-semibold">
                             Email
                         </label>
 
                         <input type="text"
-                               class="form-control"
-                               value="<?= esc($user['email']) ?>"
-                               readonly>
+                            class="form-control"
+                            value="<?= esc($user['email']) ?>"
+                            readonly>
 
                     </div>
 
-                    <div class="col-md-12 mb-4">
+                    <div class="col-md-6 mb-4">
+
+                        <label class="form-label fw-semibold">
+                            No. Telepon
+                        </label>
+
+                        <input type="text"
+                            class="form-control"
+                            value="<?= esc($user['no_telp']) ?>"
+                            readonly>
+
+                    </div>
+
+                    <div class="mb-4">
 
                         <label class="form-label fw-semibold">
                             Role
                         </label>
 
                         <input type="text"
-                               class="form-control"
-                               value="<?= ucfirst($user['role']) ?>"
-                               readonly>
+                            class="form-control"
+                            value="<?= ucfirst($user['role']) ?>"
+                            readonly>
 
                     </div>
 
