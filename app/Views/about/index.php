@@ -4,106 +4,45 @@
 
 <div class="container-fluid">
 
-    <!-- Judul -->
+    <!-- Daftar Anggota -->
+    <h2 class="fw-bold text-center mb-5">
+        Daftar Anggota
+    </h2>
 
-    <div class="text-center mb-5">
-
-        <h2 class="fw-bold">
-
-            About Us
-
-        </h2>
-
-        <p class="text-muted">
-
-            Sistem Rental Mobil Berbasis Web menggunakan CodeIgniter 4
-
-        </p>
-
-    </div>
-
-    <!-- Informasi Aplikasi -->
-
-    <div class="card shadow-sm border-0 mb-5">
-
-        <div class="card-body">
-
-            <h4 class="mb-3">
-
-                Tentang Aplikasi
-
-            </h4>
-
-            <p align="justify">
-
-                Sistem Rental Mobil merupakan aplikasi berbasis web yang
-                digunakan untuk mempermudah proses penyewaan mobil secara
-                online. Aplikasi ini memiliki dua jenis pengguna yaitu
-                <strong>Admin</strong> dan
-                <strong>Customer</strong>.
-
-            </p>
-
-            <p align="justify">
-
-                Customer dapat melihat daftar mobil, melakukan booking,
-                dan memantau status penyewaan.
-
-                Sedangkan Admin dapat mengelola data mobil, data user,
-                data booking, serta melakukan persetujuan penyewaan.
-
-            </p>
-
-        </div>
-
-    </div>
-
-    <!-- Tim -->
-
-    <h3 class="text-center mb-4">
-
-        Tim Pengembang
-
-    </h3>
-
-    <div class="row g-4">
+    <div class="row justify-content-center">
 
         <!-- Anggota 1 -->
+        <div class="col-lg-3 col-md-6 mb-4">
 
-        <div class="col-lg-4 col-md-6">
+            <div class="card border-0 shadow-sm rounded-4 h-100">
 
-            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body text-center p-3">
 
-                <div class="card-body text-center">
+                    <img src="<?= base_url('images/profil/ferry.jpg') ?>"
+                         class="rounded-circle shadow mb-3"
+                         width="120"
+                         height="120"
+                         style="object-fit:cover;"
+                         onerror="this.src='https://placehold.co/120x120';">
 
-                    <img src="<?= base_url('assets/img/default.png') ?>"
-                         class="rounded-circle mb-3"
-                         width="140">
+                    <table class="table table-borderless table-sm text-start mb-0">
 
-                    <h5>
+                        <tr>
+                            <th width="35%">Nama</th>
+                            <td>: Ferry Ardiansyah</td>
+                        </tr>
 
-                        Ferry Ardiansyah
+                        <tr>
+                            <th>NIM</th>
+                            <td>: 2350081001</td>
+                        </tr>
 
-                    </h5>
+                        <tr>
+                            <th>Kelas</th>
+                            <td>: DSE-A</td>
+                        </tr>
 
-                    <span class="badge bg-primary">
-
-                        Full Stack Developer
-
-                    </span>
-
-                    <hr>
-
-                    <p>
-
-                        Bertanggung jawab terhadap
-                        analisis sistem,
-                        perancangan database,
-                        frontend,
-                        backend,
-                        serta implementasi CodeIgniter 4.
-
-                    </p>
+                    </table>
 
                 </div>
 
@@ -112,40 +51,37 @@
         </div>
 
         <!-- Anggota 2 -->
+        <div class="col-lg-3 col-md-6 mb-4">
 
-        <div class="col-lg-4 col-md-6">
+            <div class="card border-0 shadow-sm rounded-4 h-100">
 
-            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body text-center p-3">
 
-                <div class="card-body text-center">
+                    <img src="<?= base_url('images/profil/anggota2.jpg') ?>"
+                         class="rounded-circle shadow mb-3"
+                         width="120"
+                         height="120"
+                         style="object-fit:cover;"
+                         onerror="this.src='https://placehold.co/120x120';">
 
-                    <img src="<?= base_url('assets/img/default.png') ?>"
-                         class="rounded-circle mb-3"
-                         width="140">
+                    <table class="table table-borderless table-sm text-start mb-0">
 
-                    <h5>
+                        <tr>
+                            <th width="35%">Nama</th>
+                            <td>: Nur Yasani Qalam Nabilah</td>
+                        </tr>
 
-                        Nama Anggota 2
+                        <tr>
+                            <th>NIM</th>
+                            <td>: 2350081013</td>
+                        </tr>
 
-                    </h5>
+                        <tr>
+                            <th>Kelas</th>
+                            <td>: DSE-A</td>
+                        </tr>
 
-                    <span class="badge bg-success">
-
-                        UI / UX Designer
-
-                    </span>
-
-                    <hr>
-
-                    <p>
-
-                        Mendesain tampilan aplikasi,
-                        membuat wireframe,
-                        prototype,
-                        dan memastikan tampilan
-                        responsif pada desktop maupun mobile.
-
-                    </p>
+                    </table>
 
                 </div>
 
@@ -154,39 +90,76 @@
         </div>
 
         <!-- Anggota 3 -->
+        <div class="col-lg-3 col-md-6 mb-4">
 
-        <div class="col-lg-4 col-md-6">
+            <div class="card border-0 shadow-sm rounded-4 h-100">
 
-            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body text-center p-3">
 
-                <div class="card-body text-center">
+                    <img src="<?= base_url('images/profil/anggota3.jpg') ?>"
+                         class="rounded-circle shadow mb-3"
+                         width="120"
+                         height="120"
+                         style="object-fit:cover;"
+                         onerror="this.src='https://placehold.co/120x120';">
 
-                    <img src="<?= base_url('assets/img/default.png') ?>"
-                         class="rounded-circle mb-3"
-                         width="140">
+                    <table class="table table-borderless table-sm text-start mb-0">
 
-                    <h5>
+                        <tr>
+                            <th width="35%">Nama</th>
+                            <td>: Aditya Rivarwa Prasetia</td>
+                        </tr>
 
-                        Nama Anggota 3
+                        <tr>
+                            <th>NIM</th>
+                            <td>: 2350081018</td>
+                        </tr>
 
-                    </h5>
+                        <tr>
+                            <th>Kelas</th>
+                            <td>: DSE-A</td>
+                        </tr>
 
-                    <span class="badge bg-warning text-dark">
+                    </table>
 
-                        System Analyst
+                </div>
 
-                    </span>
+            </div>
 
-                    <hr>
+        </div>
 
-                    <p>
+        <!-- Anggota 4 -->
+        <div class="col-lg-3 col-md-6 mb-4">
 
-                        Melakukan analisis kebutuhan,
-                        dokumentasi,
-                        pengujian sistem,
-                        dan penyusunan laporan proyek.
+            <div class="card border-0 shadow-sm rounded-4 h-100">
 
-                    </p>
+                <div class="card-body text-center p-3">
+
+                    <img src="<?= base_url('images/profil/anggota4.jpg') ?>"
+                         class="rounded-circle shadow mb-3"
+                         width="120"
+                         height="120"
+                         style="object-fit:cover;"
+                         onerror="this.src='https://placehold.co/120x120';">
+
+                    <table class="table table-borderless table-sm text-start mb-0">
+
+                        <tr>
+                            <th width="35%">Nama</th>
+                            <td>: Ihsan Nur Majid</td>
+                        </tr>
+
+                        <tr>
+                            <th>NIM</th>
+                            <td>: 2350081026</td>
+                        </tr>
+
+                        <tr>
+                            <th>Kelas</th>
+                            <td>: DSE-A</td>
+                        </tr>
+
+                    </table>
 
                 </div>
 
@@ -197,5 +170,30 @@
     </div>
 
 </div>
+
+<style>
+.card{
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15)!important;
+}
+
+.rounded-circle{
+    border:4px solid #f1f3f5;
+}
+
+.table th,
+.table td{
+    font-size:14px;
+    vertical-align:middle;
+}
+
+.table th{
+    color:#555;
+}
+</style>
 
 <?= $this->endSection() ?>
