@@ -2,83 +2,89 @@
 
 <div class="container py-5">
 
-<div class="row">
+    <div class="row">
 
-<div class="col-lg-4 mb-4">
+        <!-- Logo -->
+        <div class="col-lg-4 mb-4">
 
-<h4 class="footer-title">
+            <h4 class="footer-title">
 
-<i class="bi bi-car-front-fill"></i>
+                <i class="bi bi-car-front-fill"></i>
 
-FAS Rental Mobil
+                FAS Rental Mobil
 
-</h4>
+            </h4>
 
-</div>
+            <p class="text-muted mt-3">
+                Solusi penyewaan mobil yang mudah, cepat, aman, dan terpercaya.
+            </p>
 
-<div class="col-lg-4 mb-4">
+        </div>
 
-<h5 class="footer-title">
+        <!-- Menu -->
+        <div class="col-lg-4 mb-4">
 
-Menu
+            <h5 class="footer-title">
+                Menu
+            </h5>
 
-</h5>
+            <ul class="list-unstyled">
 
-<ul class="list-unstyled">
+                <li class="mb-2">
+                    <a class="footer-link" href="<?= base_url('customer') ?>">
+                        Home
+                    </a>
+                </li>
 
-<li><a class="footer-link" href="<?= base_url('customer') ?>">Home</a></li>
+                <li class="mb-2">
+                    <a class="footer-link" href="<?= base_url('customer/bookingSaya') ?>">
+                        Booking Saya
+                    </a>
+                </li>
 
-<li><a class="footer-link" href="<?= base_url('customer/mobil') ?>">Mobil</a></li>
+                <li class="mb-2">
+                    <a class="footer-link" href="<?= base_url('customer/about') ?>">
+                        About
+                    </a>
+                </li>
 
-<li><a class="footer-link" href="<?= base_url('customer/booking') ?>">Booking Saya</a></li>
+            </ul>
 
-<li><a class="footer-link" href="<?= base_url('about') ?>">About</a></li>
+        </div>
 
-</ul>
+        <!-- Kontak -->
+        <div class="col-lg-4 mb-4">
 
-</div>
+            <h5 class="footer-title">
 
-<div class="col-lg-4 mb-4">
+                Kontak
 
-<h5 class="footer-title">
+            </h5>
 
-Kontak
+            <p>
+                <i class="bi bi-envelope-fill"></i>
+                fasrentalmobil@gmail.com
+            </p>
 
-</h5>
+            <p>
+                <i class="bi bi-telephone-fill"></i>
+                08123456789
+            </p>
 
-<p>
+            <p>
+                <i class="bi bi-geo-alt-fill"></i>
+                Cimahi
+            </p>
 
-<i class="bi bi-envelope-fill"></i>
+        </div>
 
-fasrentalmobil@gmail.com
-
-</p>
-
-<p>
-
-<i class="bi bi-telephone-fill"></i>
-
-08123456789
-
-</p>
-
-<p>
-
-<i class="bi bi-geo-alt-fill"></i>
-
-Cimahi
-
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </div>
 
 <div class="footer-bottom">
 
-© <?= date('Y') ?> FAS Rental Mobil
+    © <?= date('Y') ?> FAS Rental Mobil
 
 </div>
 
