@@ -31,7 +31,7 @@
                 <li class="nav-item">
 
                     <a class="nav-link <?= uri_string() == 'customer' ? 'active' : '' ?>"
-                       href="<?= base_url('customer') ?>">
+                    href="<?= base_url('customer') ?>">
 
                         Home
 
@@ -41,19 +41,8 @@
 
                 <li class="nav-item">
 
-                    <a class="nav-link <?= uri_string() == 'customer/mobil' ? 'active' : '' ?>"
-                       href="<?= base_url('customer/mobil') ?>">
-
-                        Mobil
-
-                    </a>
-
-                </li>
-
-                <li class="nav-item">
-
-                    <a class="nav-link <?= uri_string() == 'customer/booking' ? 'active' : '' ?>"
-                       href="<?= base_url('customer/booking') ?>">
+                    <a class="nav-link <?= uri_string() == 'customer/bookingSaya' ? 'active' : '' ?>"
+                    href="<?= base_url('customer/bookingSaya') ?>">
 
                         Booking Saya
 
@@ -64,7 +53,7 @@
                 <li class="nav-item">
 
                     <a class="nav-link <?= uri_string() == 'about' ? 'active' : '' ?>"
-                       href="<?= base_url('about') ?>">
+                    href="<?= base_url('about') ?>">
 
                         About
 

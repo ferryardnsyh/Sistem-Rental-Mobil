@@ -297,13 +297,69 @@ footer{
 
 }
 
-.navbar-nav .nav-link{
+.navbar .nav-link{
 
-    margin:8px 0;
+    position:relative;
 
-    display:inline-block;
+    margin:0 10px;
+
+    color:#495057;
+
+    font-weight:500;
+
+    transition:.3s;
 
 }
+
+.navbar .nav-link:hover{
+
+    color:#0d6efd;
+
+}
+
+.navbar .nav-link::after{
+
+    content:'';
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:3px;
+
+    background:#0d6efd;
+
+    border-radius:20px;
+
+    transition:.3s;
+
+}
+
+/* Hover */
+
+.navbar .nav-link:hover::after{
+
+    width:100%;
+
+}
+
+/* Active */
+
+.navbar .nav-link.active{
+
+    color:#0d6efd;
+
+    font-weight:600;
+
+}
+
+.navbar .nav-link.active::after{
+
+    width:100%;
 
 }
 

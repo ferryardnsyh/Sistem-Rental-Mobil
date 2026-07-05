@@ -48,3 +48,10 @@ $routes->get('about', 'About::index');
 
 // customer
 $routes->get('customer', 'Customer::index');
+$routes->get('customer/mobil', 'Customer::mobil');
+$routes->get('customer/detail/(:num)', 'Customer::detail/$1');
+
+$routes->get('customer/booking/(:num)', 'Customer::booking/$1');
+$routes->post('customer/simpanBooking', 'Customer::simpanBooking');
+
+$routes->get('customer/bookingSaya', 'Customer::bookingSaya');
