@@ -55,3 +55,20 @@ $routes->get('customer/booking/(:num)', 'Customer::booking/$1');
 $routes->post('customer/simpanBooking', 'Customer::simpanBooking');
 
 $routes->get('customer/bookingSaya', 'Customer::bookingSaya');
+
+// about
+$routes->get('about', function () {
+    return view('customer/about', [
+        'title' => 'About Us'
+    ]);
+});
+$routes->get('customer/about', 'Customer::about');
+$routes->get('customer/profil', 'Customer::profil');
+
+// edit dan update
+$routes->get('customer/profil/edit', 'Customer::editProfil');
+$routes->post('customer/profil/update', 'Customer::updateProfil');
+
+// rubah password
+$routes->get('customer/profil/password', 'Customer::ubahPassword');
+$routes->post('customer/profil/password/update', 'Customer::updatePassword');

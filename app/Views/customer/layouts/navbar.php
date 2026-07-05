@@ -52,11 +52,9 @@
 
                 <li class="nav-item">
 
-                    <a class="nav-link <?= uri_string() == 'about' ? 'active' : '' ?>"
-                    href="<?= base_url('about') ?>">
-
+                    <a class="nav-link <?= uri_string() == 'customer/about' ? 'active' : '' ?>"
+                    href="<?= base_url('customer/about') ?>">
                         About
-
                     </a>
 
                 </li>
