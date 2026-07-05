@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 05, 2026 at 08:13 AM
+-- Generation Time: Jul 05, 2026 at 02:15 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.2.12
 
@@ -48,9 +48,11 @@ INSERT INTO `booking` (`id`, `user_id`, `mobil_id`, `tanggal_sewa`, `tanggal_kem
 (1, 1, 2, '2026-07-05', '2026-07-08', 3, '6000.00', 'Selesai', '2026-07-04 11:03:43', '2026-07-04 11:13:05'),
 (2, 1, 2, '2026-07-05', '2026-07-05', 1, '2000.00', 'Dibatalkan', '2026-07-04 11:13:16', '2026-07-04 11:13:18'),
 (3, 1, 2, '2026-07-05', '2026-07-05', 1, '2000.00', 'Dibatalkan', '2026-07-04 13:20:36', '2026-07-04 13:20:55'),
-(4, 2, 2, '2026-07-05', '2026-07-09', 4, '8000.00', 'Disetujui', '2026-07-04 16:51:34', '2026-07-04 17:05:33'),
+(4, 2, 2, '2026-07-05', '2026-07-09', 4, '8000.00', 'Selesai', '2026-07-04 16:51:34', '2026-07-05 06:57:09'),
 (5, 2, 2, '2026-07-05', '2026-07-09', 4, '8000.00', 'Dibatalkan', '2026-07-04 16:54:04', '2026-07-04 17:05:38'),
-(6, 2, 3, '2026-07-05', '2026-07-07', 2, '800000.00', 'Selesai', '2026-07-04 16:58:54', '2026-07-04 17:05:40');
+(6, 2, 3, '2026-07-05', '2026-07-07', 2, '800000.00', 'Selesai', '2026-07-04 16:58:54', '2026-07-04 17:05:40'),
+(7, 2, 6, '2026-07-05', '2026-07-06', 1, '800000.00', 'Selesai', '2026-07-05 01:33:28', '2026-07-05 06:57:11'),
+(8, 2, 4, '2026-07-05', '2026-07-07', 2, '1300000.00', 'Selesai', '2026-07-05 06:55:01', '2026-07-05 06:57:18');
 
 -- --------------------------------------------------------
 
@@ -77,11 +79,11 @@ CREATE TABLE `mobil` (
 --
 
 INSERT INTO `mobil` (`id`, `nama_mobil`, `merk`, `plat_nomor`, `tahun`, `transmisi`, `harga_sewa`, `status`, `gambar`, `created_at`, `updated_at`) VALUES
-(2, 'avanza', 'toyota', 'b 123 uu', 2011, 'Matic', '2000.00', 'Disewa', '1783202337_8adb22d2f0218c656b11.jpeg', '2026-07-04 10:04:45', '2026-07-04 17:05:33'),
+(2, 'avanza', 'toyota', 'b 123 uu', 2011, 'Matic', '2000.00', 'Tersedia', '1783202337_8adb22d2f0218c656b11.jpeg', '2026-07-04 10:04:45', '2026-07-05 06:57:09'),
 (3, 'Brio', 'Honda', 'D 2121 UUE', 2020, 'Manual', '400000.00', 'Tersedia', '1783202423_b8c40bcb5322e0a47bc8.jpeg', '2026-07-04 15:00:23', '2026-07-04 17:05:40'),
-(4, 'Xpander', 'Mitsubishi', 'D 3234 SBT', 2021, 'Matic', '650000.00', 'Tersedia', '1783202466_06857a316687700b12bf.jpeg', '2026-07-04 15:01:06', '2026-07-04 15:01:06'),
+(4, 'Xpander', 'Mitsubishi', 'D 3234 SBT', 2021, 'Matic', '650000.00', 'Tersedia', '1783202466_06857a316687700b12bf.jpeg', '2026-07-04 15:01:06', '2026-07-05 06:57:18'),
 (5, 'Yaris', 'Toyota', 'D 8754 SBE', 2019, 'Matic', '550000.00', 'Tersedia', '1783202511_ea962b5fa9849c6fc29b.jpeg', '2026-07-04 15:01:51', '2026-07-04 15:01:51'),
-(6, 'Alphard', 'Toyota', 'D 7643 SBB', 2023, 'Manual', '800000.00', 'Tersedia', '1783202579_1c7961dc6c0117068cf9.jpeg', '2026-07-04 15:02:59', '2026-07-04 15:02:59'),
+(6, 'Alphard', 'Toyota', 'D 7643 SBB', 2023, 'Manual', '800000.00', 'Tersedia', '1783202579_1c7961dc6c0117068cf9.jpeg', '2026-07-04 15:02:59', '2026-07-05 06:57:11'),
 (7, 'Kijang Innova Reborn', 'Toyota', 'D 3332 UDY', 2020, 'Manual', '750000.00', 'Tersedia', '1783202645_8eb12f699cd5a0ee84ab.jpeg', '2026-07-04 15:04:05', '2026-07-04 15:04:05');
 
 -- --------------------------------------------------------
@@ -95,6 +97,8 @@ CREATE TABLE `users` (
   `nama` varchar(100) NOT NULL,
   `username` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
+  `no_telp` varchar(20) NOT NULL,
+  `foto` varchar(255) DEFAULT NULL,
   `password` varchar(255) NOT NULL,
   `role` enum('admin','customer') NOT NULL DEFAULT 'customer',
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
@@ -105,9 +109,9 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `nama`, `username`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES
-(1, 'Admin1', 'admin', 'admin@gmail.com', '$2y$10$sOfM1L/zhA7Dl9t7WznqwuS8EOYetqwvtI9UUwRBPJ.wSItpzCDEi', 'admin', '2026-07-04 15:58:34', '2026-07-04 13:54:39'),
-(2, 'Ferry Ardiansyah', 'ferry', 'ferry@gmail.com', '$2y$10$hn0aFWZ7ne.sTFwisu2M8u7GPFuRg8DXVePDgKKJYORR8WaavNxi.', 'customer', '2026-07-04 14:33:17', '2026-07-05 01:12:21');
+INSERT INTO `users` (`id`, `nama`, `username`, `email`, `no_telp`, `foto`, `password`, `role`, `created_at`, `updated_at`) VALUES
+(1, 'Admin1', 'admin', 'admin@gmail.com', '', NULL, '$2y$10$sOfM1L/zhA7Dl9t7WznqwuS8EOYetqwvtI9UUwRBPJ.wSItpzCDEi', 'admin', '2026-07-04 15:58:34', '2026-07-04 13:54:39'),
+(2, 'Ferry Ardiansyah', 'ferry', 'ferry@gmail.com', '0812134', '1783257212_250f303fb0f300b3d6ef.jpeg', '$2y$10$hn0aFWZ7ne.sTFwisu2M8u7GPFuRg8DXVePDgKKJYORR8WaavNxi.', 'customer', '2026-07-04 14:33:17', '2026-07-05 06:14:30');
 
 --
 -- Indexes for dumped tables
@@ -144,7 +148,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `mobil`
